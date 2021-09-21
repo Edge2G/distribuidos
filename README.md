@@ -9,3 +9,15 @@ Lorenzo Alfaro, Milenko Espinoza, Cristián Maira
 ```sh
 sudo pip install redis
 ```
+
+- gRPC: [Sitio de referencia](https://grpc.io/docs/languages/python/quickstart/)
+
+```sh
+python -m pip install grpcio
+```
+
+- gRPC tools
+
+```sh
+python -m pip install grpcio-tools
+```
