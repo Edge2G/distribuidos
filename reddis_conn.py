@@ -5,7 +5,7 @@ r.set('hello','world') #llave=hello valor=world
 value = r.get('hello')
 print(value)
 
-# Candos para la terminal:
+# Comandos para la terminal:
 # config get maxmemory-policy : te permite saber la politica de tu cache.
 # config set maxmemory-policy volatile-lru : cambia las politicas del cache a lru.
 # config get maxmemory : obtienes el maximo de la memoria cache -----> si sale 0 es xq tienen memoria infinita.
