@@ -19,5 +19,5 @@ python -m pip install grpcio
 - gRPC tools
 
 ```sh
-python -m pip install grpcio-tools
+python3 -m pip install grpcio-tools
 ```
