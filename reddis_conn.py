@@ -6,6 +6,7 @@ value = r.get('hello')
 print(value)
 
 # Comandos para la terminal:
+# redis-cli : ingresa a redis
 # config get maxmemory-policy : te permite saber la politica de tu cache.
 # config set maxmemory-policy volatile-lru : cambia las politicas del cache a lru.
 # config get maxmemory : obtienes el maximo de la memoria cache -----> si sale 0 es xq tienen memoria infinita.
