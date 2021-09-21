@@ -13,7 +13,7 @@ sudo pip install redis
 - gRPC: [Sitio de referencia](https://grpc.io/docs/languages/python/quickstart/)
 
 ```sh
-python -m pip install grpcio
+python3 -m pip install grpcio
 ```
 
 - gRPC tools
