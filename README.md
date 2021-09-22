@@ -15,6 +15,38 @@ Y clonar el repositorio
 git clone https://github.com/Edge2G/distribuidos.git
 ```
 
+Por otra parte, se debe instalar la consola de comandos de redis (esto es para una distribucion basada en ubuntu):
+
+```sh
+sudo apt install redis-server
+```
+
+Luego, configurar redis para que corra con systemd (initsystem). Hay que editar el archivo **redis.conf** y cambiar la linea que dice **supervised no** por **supervised systemd**
+
+```sh
+sudo vim /etc/redis/redis.conf
+```
+
+Y reiniciar la configuracion
+
+```sh
+sudo systemctl restart redis.service
+```
+
+Con esto podemos usar **redis-cli** y configurarlo para que utilice una politica de remocion y limitar la ram:
+
+```sh
+redis-cli
+```
+
+```sh
+config set maxmemory-policy volatile-lru
+```
+
+```sh
+config set maxmemory 20M
+```
+
 ###
 Referencias
 
