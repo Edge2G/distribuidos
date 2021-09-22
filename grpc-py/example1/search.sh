@@ -1,1 +1,0 @@
-python -m grpc_tools.protoc --proto_path=. ./search.proto --python_out=. --grpc_python_out=.
