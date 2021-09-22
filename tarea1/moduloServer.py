@@ -3,6 +3,9 @@ from concurrent import futures
 import time
 import protoBusqueda_pb2_grpc as pb2_grpc
 import protoBusqueda_pb2 as pb2
+import json
+import re 
+
 
 
 class servicioBusqueda(pb2_grpc.ServicioBusquedaServicer):
@@ -13,9 +16,23 @@ class servicioBusqueda(pb2_grpc.ServicioBusquedaServicer):
     def ObtenerRespuesta(self, request, context):
         string_de_busqueda = request.nombre
         result = f'Servidor buscando el item: "{string_de_busqueda}"'
-        # Aca se implementa la busqueda con el json
-        result = {'id': 1, 'nombre': result, 'marca': 'Western Digital', 'precio': 36490}
-        search_res = {'item': [result]}
+
+        Listresult=[]
+        
+        nombre=string_de_busqueda
+
+        with open('inventario.json') as file:
+            data = json.load(file)
+
+            for producto in data['productos']:
+
+                if re.search(nombre, producto['nombre']):
+                    result = {'id': producto['id'], 'nombre': producto['nombre'] , 'marca': producto['marca'], 'precio':producto['precio'] }
+                    Listresult.append(result)
+
+        search_res = {'item': Listresult}
+        print(type(search_res))
+
         return pb2.ListaResultante(**search_res)
 
 
