@@ -63,6 +63,8 @@ python3 moduloServer.py
 python3 moduloCliente.py
 ```
 
+**Observacion** El archivo inventario.json tiene todos los productos de la tienda. El sistema de busqueda es **case sensitive** y bien especifico. No es necesario escribir el nombre completo, pero si, la porcion que se escribe, debe ser exactamente igual.
+
 ### Referencias
 
 - Redis: [Sitio de referencia](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-20-04)
