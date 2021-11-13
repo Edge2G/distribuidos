@@ -1,4 +1,2 @@
 #!/bin/bash
-
-# Setear la variable en donde instalaron kafka.
-KAFKA_HOME=~/Documentos/kafka
+KAFKA_HOME=~/Documentos/Kafka/kafka_2.12-2.8.0

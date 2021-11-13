@@ -13,9 +13,8 @@ mod = Blueprint('rutas_ordenes', __name__)
 @mod.route("/new_order", methods=['GET', 'POST'])
 def newOrder():
 
-    json_url = os.path.join(BASE_DIR, "static/js", "data.json")
+    json_url = os.path.join(BASE_DIR, "app/static/js", "data.json")
     data = json.load(open(json_url))
-    print(data)
     producer = KafkaProducer(value_serializer=lambda m: json.dumps(m).encode('ascii'), bootstrap_servers=[KAFKA_SERVER])
     producer.send('Ordenes', data)
     producer.flush()
