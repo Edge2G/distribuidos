@@ -1,0 +1,16 @@
+{%extends "layout_in.html" %} {% block body %}
+<div class="login-box">
+    <h2>Búsqueda</h2>
+    <form action="\search_product" method="POST" autocomplete="off">
+        <div class="user-box">
+            <input type="text" name="product_name" required>
+            <label>Nombre del producto</label>
+        </div>
+        <button type="submit">
+            <span></span>
+            <span></span>
+            <b>Buscar</b>
+        </a>
+    </form>
+</div>
+{% endblock %}
