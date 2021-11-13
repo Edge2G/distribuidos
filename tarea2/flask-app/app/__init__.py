@@ -12,9 +12,11 @@ app = Flask(__name__, template_folder='template')
 # Blueprints (Routes)
 from app.routes.rutas_ordenes import mod
 from app.routes.rutas_resumen import mod
+from app.routes.rutas_home import mod
 
 app.register_blueprint(routes.rutas_ordenes.mod)
 app.register_blueprint(routes.rutas_resumen.mod)
+app.register_blueprint(routes.rutas_home.mod)
 
 # Configuraciones desde config.py
 app.config.from_object('config')
