@@ -1,5 +1,5 @@
 from kafka import KafkaProducer
-from flask import Blueprint, request, url_form, json, url_for
+from flask import Blueprint, request, json, url_for
 
 def redirect_url(default='index'): # Redireccionamiento desde donde vino la request
     return request.args.get('next') or \
