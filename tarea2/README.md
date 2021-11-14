@@ -31,13 +31,21 @@ Y en la carpeta de tarea 2, se encuentra otro directorio llamado  **kafka_script
 
 ademas es necesario crear 2 topics que tienen la siguiente configuracion:
 
+Ordenes 
 ```sh
-Ordenes
 --create \
 --topic Ordenes -zookeeper localhost:2181 \
 --replication-factor 1 \
 --partitions 1
 ```
+ResumenD
+
+--create \
+--topic ResumenD -zookeeper localhost:2181 \
+--replication-factor 1 \
+--partitions 1
+```
+
 Por otro lado, como se utiliza python3, es necesario instalar la libreria de kafka para python:
 
 ```sh
