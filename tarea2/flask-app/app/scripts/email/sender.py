@@ -1,2 +1,8 @@
+from run import SUMMARIES
+
 def enviar_mail():
-    pass
+
+    for resumen in SUMMARIES:
+        pass
+
+    

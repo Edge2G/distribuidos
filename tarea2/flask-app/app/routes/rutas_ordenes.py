@@ -1,7 +1,6 @@
-import os
 from kafka import KafkaProducer
-from flask import Blueprint, request, json, url_for
-from config import BASE_DIR, KAFKA_SERVER
+from flask import Blueprint, request, json, url_for, redirect
+from config import KAFKA_SERVER, TOPIC_NAME_ORDENES
 
 def redirect_url(default='index'): # Redireccionamiento desde donde vino la request
     return request.args.get('next') or \
@@ -13,10 +12,12 @@ mod = Blueprint('rutas_ordenes', __name__)
 @mod.route("/new_order", methods=['GET', 'POST'])
 def newOrder():
 
-    json_url = os.path.join(BASE_DIR, "app/static/js", "data.json")
-    data = json.load(open(json_url))
-    producer = KafkaProducer(value_serializer=lambda m: json.dumps(m).encode('ascii'), bootstrap_servers=[KAFKA_SERVER])
-    producer.send('Ordenes', data)
-    producer.flush()
+    id = input('Ingrese id:')
+    mail1 = input('Ingrese mail del vendedor:')
+    mail2 = input('Ingrese mail del cocinero:')
+    sopaipillas = input('Ingrese la cantidad de sopaipillas vendidas:')
 
-    return redirect_url()
+    producer = KafkaProducer(value_serializer=lambda m: json.dumps(m).encode('ascii'), bootstrap_servers=[KAFKA_SERVER])
+    producer.send(TOPIC_NAME_ORDENES, {'order_id': id, 'email_vendedor': mail1, 'email_cocinero': mail2, 'numero_sopaipillas': sopaipillas})
+    producer.flush()
+    return redirect("/")
