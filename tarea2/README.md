@@ -19,7 +19,7 @@ Luego se clona el repositorio
 git clone https://github.com/Edge2G/distribuidos.git
 ```
 
-Y en la carpeta de tarea 2, se encuentra otro directorio llamado  **kafka_scripts** en donde primero se debe ejecutar el servicio de zookeeper, y luego el server de kafka (en consolas separadas)
+Y en la carpeta de *tarea2/flask-app/app/scripts/kafka*, se encuentran los scripts de kafka. Primero se debe ejecutar el servicio de zookeeper, y luego el server de kafka (en consolas separadas)
 
 ```sh
 ./zookeeper_run.sh
@@ -29,25 +29,36 @@ Y en la carpeta de tarea 2, se encuentra otro directorio llamado  **kafka_script
 ./kafka_run.sh
 ```
 
-ademas es necesario crear 2 topics que tienen la siguiente configuracion:
+ademas es necesario crear 2 topics:
 
 Ordenes 
 ```sh
---create \
---topic Ordenes -zookeeper localhost:2181 \
---replication-factor 1 \
---partitions 1
+./create_topic_Ordenes.sh
 ```
 ResumenD
 ```sh
---create \
---topic ResumenD -zookeeper localhost:2181 \
---replication-factor 1 \
---partitions 1
+./create_topic_ResumenD.sh
 ```
 
 Por otro lado, como se utiliza python3, es necesario instalar la libreria de kafka para python:
 
 ```sh
-pip install kafka-python
+pip install kafka-python flask
 ```
+
+### 2 - Ejecucion de los modulos<br><br>
+
+Para ejecutar los modulos, se debe correr el archivo app.py que se encuentra en flask-app/
+
+```sh
+python run.py
+```
+
+Y luego ir a:
+
+```sh
+http://127.0.0.1:5000/
+```
+
+- Para crear una nueva orden, simplemente se clickea en el link de **Nueva Orden**
+- Para hacer un resumen diario, se clickea en **Resumen Diario**
