@@ -48,7 +48,7 @@ pip install kafka-python flask
 
 ### 2 - Ejecucion de los modulos<br><br>
 
-Para ejecutar los modulos, se debe correr el archivo app.py que se encuentra en flask-app/
+Para ejecutar los modulos, se debe correr el archivo run.py que se encuentra en flask-app/
 
 ```sh
 python run.py
