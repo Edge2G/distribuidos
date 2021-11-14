@@ -39,7 +39,7 @@ Ordenes
 --partitions 1
 ```
 ResumenD
-
+```sh
 --create \
 --topic ResumenD -zookeeper localhost:2181 \
 --replication-factor 1 \
