@@ -61,4 +61,5 @@ http://127.0.0.1:5000/
 ```
 
 - Para crear una nueva orden, simplemente se clickea en el link de **Nueva Orden**
+  - Luego, se debe ir a la consola para ingresar los datos por stdin
 - Para hacer un resumen diario, se clickea en **Resumen Diario**
