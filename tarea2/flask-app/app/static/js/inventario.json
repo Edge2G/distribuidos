@@ -1,0 +1,29 @@
+{
+    "productos": [
+    { "id": 1, "nombre": "Disco Duro 1Tb para PC", "marca": "Western Digital", "precio": 36490},
+    { "id": 2, "nombre": "Fuente de Poder 600W", "marca": "EVGA", "precio": 69990},
+    { "id": 3, "nombre": "Silla Gamer Profesional", "marca": "Cougar Gaming", "precio": 219990},
+    { "id": 4, "nombre": "Mouse Gamer Genius Gaming", "marca": "Genius", "precio": 17490},
+    { "id": 5, "nombre": "CableMod WideBeam Magnetic", "marca": "Cablemod", "precio": 29990},
+    { "id": 6, "nombre": "Mouse Pad profesional para videojuegos", "marca": "Hyperx", "precio": 11990},
+    { "id": 7, "nombre": "KNS Apoya munecas negro", "marca": "Kensington", "precio": 7390},
+    { "id": 8, "nombre": "Cartucho original de tinta negra", "marca": "HP", "precio": 9590},
+    { "id": 9, "nombre": "Mini Teclado Inalambrico para Smart TV", "marca": "Generico", "precio": 11990},
+    { "id": 10, "nombre": "Gamepad PC Trust GXT 540 Wired", "marca": "Trust", "precio": 16590},
+    { "id": 11, "nombre": "Adaptador de Mini DisplayPort a VGA", "marca": "Apple", "precio": 31490},
+    { "id": 12, "nombre": "UPS Interactiva Forza NT-502C", "marca": "Forza", "precio": 37990},
+    { "id": 13, "nombre": "Fuente de Poder Thermaltake Smart 500W", "marca": "Thermaltake", "precio": 41190},
+    { "id": 14, "nombre": "Lector de Codigo de Barra", "marca": "Datalogic", "precio": 52290},
+    { "id": 15, "nombre": "Apple Lapiz Digital Pencil para iPad Pro", "marca": "Apple", "precio": 114090},
+    { "id": 16, "nombre": "Proyector EPS Powerlite  530 XGA", "marca": "Epson", "precio": 1125990},
+    { "id": 17, "nombre": "Switch Cisco Gigabit Ethernet Catalyst 2960-X", "marca": "Cisco", "precio": 1576590},
+    { "id": 18, "nombre": "Memoria Ram DDR3L 8GB 1600 MHz", "marca": "Kingston", "precio": 54990},
+    { "id": 19, "nombre": "Webcam Logitech C922 Pro Stream", "marca": "Logitech", "precio": 70590},
+    { "id": 20, "nombre": "Teclado Mecanico Gamer Logitech G413", "marca": "Logitech", "precio": 84990},
+    { "id": 21, "nombre": "Pendrive 32 Gb", "marca": "SanDisk", "precio": 10790},
+    { "id": 22, "nombre": "Mochila Kensington Contour Backpack 17", "marca": "Kensington", "precio": 41920},
+    { "id": 23, "nombre": "Monitor ViewSonic 22 VX2276-SMHD", "marca": "ViewSonic", "precio": 158990},
+    { "id": 24, "nombre": "Microsoft 365 Personal", "marca": "Microsoft", "precio": 40890},
+    { "id": 25, "nombre": "Back-UPS de APC de Bajo Consumo Pro 550", "marca": "APC", "precio": 99990}
+    ]
+}
